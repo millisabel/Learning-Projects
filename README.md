@@ -2,6 +2,10 @@
 
 #### My work
 ___________________________________________________________________________________________________________
+##### [Sapper](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/js30_3.3-random-game/)
+- Technologies: HTML | SCSS | JS
+- Duration: January, 2022
+___________________________________________________________________________________________________________
 ##### [Filmoscope](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/js30_2.3-movie-app/)
 - Overview: Implementation of an application that displays information about movies upon user request.
 - I implemented: 
@@ -12,7 +16,7 @@ ________________________________________________________________________________
 - Duration: January, 2022
 __________________________________________________________________________________________________________             
 ##### [Portfolio for a photographer](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/portfolio/)
-- Overview: Implementation of an application that displays information about movies upon user request.
+- Overview: web site for photographer.
 - I implemented: 
     - Light/Dark theme
     - Adaptive design
