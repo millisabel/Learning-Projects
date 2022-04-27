@@ -2,11 +2,11 @@
 
 #### My work
 ___________________________________________________________________________________________________________
-##### [Sapper](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/js30_3.3-random-game/)
+##### [Sapper](https://millisabel.github.io/saper/)
 - Technologies: HTML | SCSS | JS
 - Duration: January, 2022
 ___________________________________________________________________________________________________________
-##### [Filmoscope](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/js30_2.3-movie-app/)
+##### [Filmoscope](https://millisabel.github.io/movie-app/)
 - Overview: Implementation of an application that displays information about movies upon user request.
 - I implemented: 
     - Work with the The Movie Database (TMDB)
