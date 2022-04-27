@@ -1,0 +1,131 @@
+.field{
+  --direction: row;
+  --gap: 0;
+
+  position: relative;
+
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 5px;
+
+  background: #f4d22c;
+  filter: drop-shadow(0 0 6px black);
+
+  &__row{
+    --direction: row;
+    --gap: 0;
+  }
+
+  &__cell{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-light);
+
+    width: var(--cell-size);
+    height: var(--cell-size);
+    padding: var(--cell-padding);
+    border: 1px solid var(--color-lightdark);
+    border-radius: 5px;
+
+    user-select: none;
+    transition: 0.5s;
+
+    &.mine{
+      background-image: url("../images/mina.png");
+      background-size: 80%;
+      background-position:70% 70%;
+      background-repeat: no-repeat;
+    }
+
+    &.flag{
+
+      &::before{
+        content: '';
+
+        position: absolute;
+        top: var(--cell-padding);
+        left: var(--cell-padding);
+        z-index: 10;
+
+        width: var(--cell-size);
+        height: var(--cell-size);
+        border-radius: 4px;
+
+        background-image: url("../images/flag.png");
+        background-size: 70%;
+        background-position:50% 50%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.hide{ cursor: crosshair;
+
+      &::after{
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: var(--cell-size);
+        height: var(--cell-size);
+        border-radius: 4px;
+
+        box-shadow: 0 0 0 1px white;
+        background:  radial-gradient(rgba(253,212,45,1) 5%, rgba(35,195,34,1));
+        background:  #85cb27;
+      }
+
+      &.backlight{
+        &::after{
+          animation: backlight 0.5s;
+        }
+      }
+    }
+  }
+
+  &.message{
+
+    &.win{
+      &::before {
+        content: 'You Win';
+        color: green;
+      }
+    }
+
+    &.lose{
+
+      &::before {
+        content: 'game over';
+        color: red;
+      }
+    }
+
+    &::before{
+      content: 'You';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase;
+
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

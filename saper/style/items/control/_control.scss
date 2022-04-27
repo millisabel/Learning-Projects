@@ -1,0 +1,72 @@
+.control{
+  --direction: row;
+  --align-row: space-between;
+
+  --info-color: var(--color-dark);
+  --info-height:var(--item-size) ;
+  --border-size: calc(var(--info-height) / 2);
+  --minus: -1;
+
+  --control-width: calc(100% - (var(--item-size) * 2));
+
+  position: relative;
+
+  width: var(--control-width);
+  margin: 0 auto;
+  filter: drop-shadow(0 1px 10px black);
+
+  background: var(--color-light);
+
+  &__item{
+    width: var(--item-size);
+    height: var(--item-size);
+    padding: 5px;
+
+    font-size: 0;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 50%;
+
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover{
+      background-size: 50%;
+    }
+
+    &[data-action="showTable"]{
+      background-image: url('../images/table-result.svg');
+    }
+
+    &[data-action="startScreen"]{
+      background-image: url('../images/house.svg');
+
+    }
+  }
+
+  &::after,
+  &::before{
+    position: absolute;
+    top: 0;
+    content: '';
+    z-index: 1;
+
+    width: 0;
+    height: 0;
+    border: var(--border-size) solid var(--color-light);
+  }
+
+  &::before{
+    left: calc((var(--item-size) * var(--minus)) + 1px);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &::after{
+    right: calc((var(--item-size) * var(--minus)) + 1px);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+}

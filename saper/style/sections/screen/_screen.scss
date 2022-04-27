@@ -1,0 +1,25 @@
+.screen{
+  position: relative;
+
+  transition: 0.5s;
+
+  &--start{
+
+  }
+
+  &--game{
+  }
+
+  &--result{
+    width: 60%;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 25px var(--color-dark);
+
+    @media (max-width: 576px){
+      padding: 25px 0;
+    }
+  }
+}

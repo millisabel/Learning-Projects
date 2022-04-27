@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sapper</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/bomb.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body class="flex">
+    <header class="header">
+        <div class="wrap">
+            <h1 class="title flex">sapper</h1>
+            <div class="info flex">
+                <div class="info__item count state--hide">5</div>
+                <div class="info__item time state--hide">00:00:00</div>
+            </div>
+            <div class="control flex">
+                <button class="control__item" data-action="showTable">Table</button>
+                <button class="control__item state--hide" data-action="startScreen">Start</button>
+            </div>
+        </div>
+    </header>
+    <main class="main flex">
+        <div class="wrap flex">
+            <div class="screen screen--start flex">
+                <div class="level flex">
+                    <button class="level__item btn" data-level="easy" data-action="checkLevel">easy</button>
+                    <button class="level__item btn" data-level="middle" data-action="checkLevel">middle</button>
+                    <button class="level__item btn" data-level="heavy" data-action="checkLevel">heavy</button>
+                </div>
+            </div>
+            <div class="screen screen--game flex state--hide">
+                <div class="game">
+
+                </div>
+                <div class="game__buttons flex btn__box">
+                    <button class="btn" data-action="showMenu" title="back to menu">back</button>
+                    <button class="btn state--hide" data-action="playAgain" title="play again">play again</button>
+                </div>
+            </div>
+            <div class="screen screen--result flex state--hide">
+                <table class="table">
+                    <caption>your results</caption>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>time</th>
+                        <th>state</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="result__buttons flex btn__box">
+                    <button class="btn btn--small state--hide" data-action="showMenu" title="back to menu">menu</button>
+                    <button class="btn btn--small" data-action="close" title="close window">close</button>
+                    <button class="btn btn--small state--hide" data-action="playAgain" title ="play again">play again</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrap flex footer__wrap">
+            <a href="https://github.com/millisabel" class="link link--github" target="_blank" title="my github">github</a>
+            <p class="footer__item">
+                <span class="">©</span>
+                <span class="">2022</span>
+            </p>
+            <a href="https://rs.school/js/" class="link link--school" target="_blank" title="Rolling Scopes School">Rolling
+                Scopes School</a>
+        </div>
+    </footer>
+
+<script src="script/main.js" type="module"></script>
+</body>
+</html>

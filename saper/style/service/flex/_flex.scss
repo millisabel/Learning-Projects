@@ -1,0 +1,12 @@
+.flex{
+  --direction: column;
+  --align-row: center;
+  --align-column: center;
+  --gap: 20px;
+
+  display: flex;
+  flex-direction: var(--direction);
+  justify-content: var(--align-row);
+  align-items: var(--align-column);
+  gap: var(--gap);
+}

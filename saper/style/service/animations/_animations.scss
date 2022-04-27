@@ -1,0 +1,26 @@
+@keyframes hide {
+  0%{
+    width: 0;
+    height: 0;
+  }
+  90%{
+    width: 0;
+    height: 0;
+  }
+  100%{
+    width: 60%;
+    height: 40px;
+  }
+}
+
+@keyframes backlight {
+  0%{
+    background: #fad104;
+  }
+  50%{
+    background: rgba(250, 209, 4, 0.21);
+  }
+  100%{
+    background: #fad104;
+  }
+}

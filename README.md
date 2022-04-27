@@ -15,7 +15,7 @@ ________________________________________________________________________________
 - Technologies: HTML | SCSS | JS
 - Duration: January, 2022
 __________________________________________________________________________________________________________             
-##### [Portfolio for a photographer](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL/portfolio/)
+##### [Portfolio for a photographer](https://millisabel.github.io/Portfolio/portfolio/)
 - Overview: web site for photographer.
 - I implemented: 
     - Light/Dark theme

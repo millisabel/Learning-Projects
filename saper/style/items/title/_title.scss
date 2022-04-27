@@ -1,0 +1,38 @@
+.title{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 50;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 5px var(--color-light));
+
+  padding: 15px;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-light);
+  letter-spacing: 0.2em;
+
+  background: transparent;
+
+  @media (max-width: 540px){
+    font-size: 0;
+  }
+  
+  &::after{
+    content: '';
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url('../images/bomb.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 540px){
+      background-image: none;
+    }
+  }
+}

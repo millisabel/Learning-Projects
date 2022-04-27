@@ -1,0 +1,24 @@
+.state{
+  transition: 0.5s;
+
+  &--hide{
+    transform: scale(0);
+    z-index: -1;
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+  }
+
+  &--back{
+    opacity: 0;
+    z-index: -1;
+  }
+
+
+
+  &--toTop{
+    position: absolute;
+    transform: translateY(100vh) scale(0);
+  }
+}

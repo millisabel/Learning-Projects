@@ -1,0 +1,18 @@
+.footer{
+  --footer-bg: var(--color-dark);
+  --text-color: #fff;
+
+  width: 100%;
+  height: var(--item-size);
+
+  color: var(--text-color);
+
+  background: var(--footer-bg);
+  filter: drop-shadow(0 1px 10px black);
+
+  &__wrap{
+    --direction: row;
+    --align-row: space-between;
+
+  }
+}

@@ -1,0 +1,21 @@
+:root{
+  --white: 255, 255, 255;
+
+  --item-size: 50px;
+
+  --cell-size: 30px;
+  --cell-padding: 2px;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 14px;
+  --color-text: #333;
+
+  --color-lightdark: #a1a1a1;
+  --color-dark: #000000;
+  --color-light: #fff;
+
+  --gradient: linear-gradient(0deg, rgba(35,195,34,1) 0%, rgba(253,212,45,1) 100%);
+
+  --bg-color: var(--color-light);
+  --screen-bg-color: var(--gradient);
+}
