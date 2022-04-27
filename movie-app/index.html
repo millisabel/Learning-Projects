@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filmoscope</title>
+    <link rel="shortcut icon" href="assets/img/favicon/film.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="grid">
+<header class="grid__row header">
+    <div class="logo link">
+        <img class="logo__img" src="assets/img/favicon/film.png" alt="" width="482" height="980">
+        <h1 class="logo__text">Filmoscope</h1>
+    </div>
+    <div class="search">
+        <label>
+            <input type="text" id="search" placeholder="Search" autofocus autocomplete="off">
+        </label>
+        <button class="search__clear"></button>
+        <button class="search__btn"></button>
+    </div>
+    <ul class="language">
+        <li class="language__item">
+            <input type="radio" name="language" value="en" id="en">
+            <label for="en">EN</label>
+        </li>
+        <li class="language__item">
+            <input type="radio" name="language" value="ru" id="ru">
+            <label for="ru">RU</label>
+        </li>
+    </ul>
+</header>
+<main class="grid__row main">
+    <section class="section preview">
+        <h2 class="section__title visually-hidden">movies</h2>
+        <div class="gallery"></div>
+        <div class="pagination">
+            <button class="pagination__btn pagination__first"></button>
+            <span class="pagination__item pagination__item--first">...</span>
+            <button class="pagination__btn pagination__prev"></button>
+            <label>
+                <input type="number" class="pagination__current" min="1" max="10">
+            </label>
+            <button class="pagination__btn pagination__next"></button>
+            <span class="pagination__item pagination__item--last">...</span>
+            <button class="pagination__btn pagination__total"></button>
+        </div>
+    </section>
+</main>
+<footer class="grid__row footer">
+    <a href="https://github.com/millisabel" class="link link--github" target="_blank"
+       title="my github">github</a>
+    <p class="footer__item">
+        <span class="">&copy;</span>
+        <span class="">2022</span>
+    </p>
+    <a href="https://rs.school/js/" class="link link--school" target="_blank"
+       title="Rolling Scopes School">Rolling Scopes School</a>
+</footer>
+<script src="script/script.js"></script>
+<script src="script/mark.js"></script>
+</body>
+
+</html>

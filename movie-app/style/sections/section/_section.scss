@@ -1,0 +1,33 @@
+/* ========== section ============ */
+
+.section{
+  padding: 30px var(--padding);
+}
+
+.full.section{
+  .pagination{
+    display: none;
+  }
+}
+
+.full.section{
+  padding: 0 var(--padding);
+  .gallery{
+    display: block;
+  }
+}
+
+.void{
+
+  .gallery{
+    display: block;
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 20vw;
+  }
+
+  .pagination{
+    display: none;
+  }
+}

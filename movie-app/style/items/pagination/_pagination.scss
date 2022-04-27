@@ -1,0 +1,104 @@
+/* ============ pagination =============== */
+
+.pagination {
+  --pagination-btn-width: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  padding: 25px;
+
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: movie 2s forwards;
+
+  &__btn {
+    width:  var(--pagination-btn-width);
+    height:  var(--pagination-btn-width);
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    background: transparent;
+
+    transition: border-color, transform 0.5s ease;
+
+    &:focus{
+      outline: none;
+    }
+
+    &:not(:disabled):focus,
+    &:not(:disabled):hover {
+      border-color: var(--hover-color);
+      box-shadow: 0 0 5px grey, 0 0 7px var(--hover-color);
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &:disabled ~ span {
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    cursor: none;
+  }
+
+  &__first {
+    order: -1;
+  }
+
+  &__total {
+    order: 7;
+  }
+
+  &__current {
+
+    width: var(--pagination-btn-width);
+    height: var(--pagination-btn-width);
+    padding: 8px;
+    border: 1px solid var(--hover-color);
+    box-shadow: 0 0 5px grey, 0 0 7px var(--hover-color);
+    border-radius: 50%;
+
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-align: center;
+    background: radial-gradient(var(--hover-color), var(--bg-color));
+    transition: transform 0.5s ease;
+
+    &:focus{
+      outline: none;
+    }
+
+    &:focus,
+    &:hover {
+      background: radial-gradient(var(--hover-color), var(--bg-color));
+      box-shadow: 0 0 5px grey, 0 0 7px var(--hover-color);
+      transform: scale(1.2);
+    }
+  }
+
+  @media (max-width: 950px){
+    --pagination-btn-width: 30px;
+
+    gap: 5px;
+    padding: 25px 2px;
+
+    font-size: 0.8em;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

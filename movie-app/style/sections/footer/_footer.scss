@@ -1,0 +1,25 @@
+/* =========== footer ============ */
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
+  align-items: stretch;
+
+  padding: 30px var(--padding);
+
+  @media (max-width: 576px){
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+.footer__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+}

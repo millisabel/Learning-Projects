@@ -1,0 +1,21 @@
+/* =========== header =========== */
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+
+  padding: 30px var(--padding);
+
+  & .logo{
+    justify-self: start;
+  }
+
+  @media (max-width: 950px){
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    justify-self: center;
+    gap: 30px;
+  }
+}

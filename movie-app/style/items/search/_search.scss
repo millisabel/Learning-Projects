@@ -1,0 +1,184 @@
+/* ============ search ============== */
+
+.search {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0;
+
+  @media (max-width: 950px){
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+
+  &__btn {
+    border: none;
+
+    display: block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+
+    background-color: var(--hover-color);
+    background-image: url("../assets/img/ico/magnifying-glass-solid.svg");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    transition: background-size 0.5s ease;
+    cursor: pointer;
+
+    &:hover{
+      background-size: 25px 25px;
+    }
+  }
+
+  &__clear{
+    position: relative;
+
+    display: block;
+    padding: 0;
+    width: 30px;
+    height: 2px;
+    border: none;
+
+    background-color: var(--font-color);
+    cursor: pointer;
+
+    transition: all 0.5s ;
+
+    &::before,
+    &::after{
+      content: '';
+
+      position: absolute;
+      top: 14px;
+      left: 4px;
+
+      display: block;
+      width: 25px;
+      height: 2px;
+
+      background-color: var(--hover-color);
+      transform-origin: center;
+      transition: transform 0.5s ease;
+    }
+
+    &::before{
+      transform: rotate(45deg) scale(0);
+    }
+
+    &::after{
+      transform: rotate(-45deg) scale(0);
+    }
+  }
+
+  &:hover,
+  &:focus{
+    &  .search__clear{
+      height: 30px;
+
+      &:hover{
+        &::before{
+          transform: rotate(225deg);
+        }
+
+        &::after{
+          transform: rotate(-225deg);
+        }
+      }
+
+      &::before{
+        transform: rotate(45deg) scale(1);
+      }
+
+      &::after{
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+  }
+
+  &:hover {
+    &::after {
+      background: var(--hover-color);
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      background: var(--hover-color);
+    }
+    &  .search__clear{
+      height: 30px;
+
+      &:hover{
+        &::before{
+          transform: rotate(225deg);
+        }
+
+        &::after{
+          transform: rotate(-225deg);
+        }
+      }
+
+      &::before{
+        transform: rotate(45deg) scale(1);
+      }
+
+      &::after{
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+  }
+
+  & input {
+    min-width: 200px;
+    max-width: 400px;
+    width: 400px;
+
+    font-size: 1.2em;
+    color: var(--font-color);
+
+    background: var(--bg-color);
+    border: none;
+    border-bottom: 2px solid var(--font-color);
+
+    @media (max-width: 950px){
+      min-width: 100px;
+      max-width: 80vw;
+      width: 80vw;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus:placeholder-shown {
+      color: var(--hover-color);
+    }
+
+    &:focus::placeholder{
+      font-size: 0;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid var(--hover-color);
+    }
+
+    &::placeholder {
+      padding: 5px 10px;
+      background: var(--bg-color);
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--font-color);
+    }
+  }
+}
+
+  //input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}

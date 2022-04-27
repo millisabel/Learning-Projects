@@ -1,0 +1,363 @@
+.movie {
+  opacity: 0;
+  transform: scale(0);
+
+  animation: movie 1.2s forwards;
+  transition: all 0.6s ease-in-out;
+
+  &__country {
+    margin-right: 7px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &::after {
+      content: ",";
+    }
+  }
+
+  &__language {
+    margin-right: 7px;
+
+    &::after {
+      content: ",";
+    }
+  }
+
+  &__year {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--hover-color);
+  }
+
+  &__range {
+    --range-color: grey;
+    --range-size: 40px;
+
+    &--green {
+      --range-color: green;
+    }
+
+    &--orange {
+      --range-color: orange;
+    }
+
+    &--red {
+      --range-color: red;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--range-size);
+    height: var(--range-size);
+    border: 1px solid var(--range-color);
+    border-radius: 50%;
+
+    font-weight: bold;
+    color: var(--range-color);
+
+    background: var(--bg-color);
+    box-shadow: 0 0 4px var(--light-color), 0 0 8px var(--range-color);
+  }
+
+  &__genre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+
+    width: 70%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    font-size: 0.7em;
+
+    & li {
+      padding: 2px 5px;
+      border-bottom: 0.2px dashed var(--hover-color);
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.movie--release {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+
+  padding: 0 0 10px 0;
+
+  background: var(--bg-color);
+  box-shadow: 1px 1px 1px var(--secondary-color), 2px 2px 2px var(--bg-color), 3px 3px 10px var(--secondary-color);
+
+  background: var(--secondary-color);
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: var(--shadow3);
+
+    .movie__info {
+      transform: scaleY(1);
+    }
+  }
+
+  & .movie {
+    &__title {
+      flex: 1 1 auto;
+      justify-self: flex-start;
+
+      padding: 5px 10px;
+
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    &__about {
+      position: relative;
+    }
+
+    &__info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      padding: 15px 10px;
+
+      background: rgba(0, 0, 0, 0.9);
+
+      transform-origin: bottom;
+      transform: scaleY(0);
+      transition: 0.7s ease-out;
+    }
+
+    &__more {
+      position: relative;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      height: 50px;
+      padding: 5px 10px;
+      transition: transform 0.5s ease;
+    }
+
+    &__range {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    &__btn {
+      appearance: none;
+
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      height: 30px;
+      margin: 0 auto;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+
+      color: var(--font-color);
+      text-align: right;
+
+      cursor: pointer;
+      box-shadow: var(--shadow);
+
+      background: var(--bg-color);
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: var(--hover-color);
+        box-shadow: 0 0 1px var(--hover-color), 0 0 4px var(--bg-color), 0 0 5px var(--hover-color);
+      }
+    }
+  }
+}
+
+.movie--full {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: minmax(120px, 300px) 1fr 20%;
+  grid-template-areas:
+          "img content about"
+          "img content btn";
+  align-items: stretch;
+  gap: 20px;
+
+  width: 100%;
+  padding: 150px 100px;
+
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+
+  @media (max-width: 992px){
+    grid-template-columns: minmax(120px, 300px) 50%;
+    grid-template-areas:
+          "img  about"
+          "content content"
+          "btn btn";
+    padding: 100px 50px 50px;
+  }
+
+
+  @media (max-width: 576px){
+    grid-template-columns: 1fr;
+    grid-template-areas:
+          "content"
+          "img"
+          "about"
+          "btn ";
+    padding: 0;
+    gap: 0;
+
+    background-size: 0;
+  }
+
+  & .movie {
+
+    &__img{
+      grid-area: img;
+
+      box-shadow: 0 0 5px var(--secondary-color);
+
+      @media (max-width: 576px){
+        justify-self: center;
+
+        background: rgba(0, 0, 0, 1);
+      }
+    }
+
+    &__content {
+      grid-area: content;
+
+      padding: 20px 50px;
+
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 5px var(--secondary-color);
+
+      @media (max-width: 576px){
+        background: rgba(0, 0, 0, 1);
+      }
+    }
+
+    &__about{
+      grid-area: about;
+
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 30px;
+
+      padding: 20px;
+
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 5px var(--secondary-color);
+
+      @media (max-width: 992px){
+        //align-self: center;
+      }
+
+      @media (max-width: 576px){
+        background: rgba(0, 0, 0, 1);
+      }
+    }
+
+    &__btn{
+      grid-area: btn;
+
+      width: 100%;
+      padding: 5px;
+
+      background: var(--bg-color);
+
+      & button{
+        width: 100%;
+        padding: 5px;
+        margin-top: auto;
+        border: 1px solid var(--hover-color);
+
+        text-align: center;
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+
+        background: transparent;
+        transition: background 0.5s ease-in;
+        cursor: pointer;
+
+        &:hover{
+          background: var(--hover-color);
+        }
+      }
+    }
+
+    &__title{
+      color: var(--hover-color);
+      border-bottom: 1px solid var(--hover-color);
+      margin-bottom: 20px;
+    }
+
+    &__tagline{
+      margin-bottom: 30px;
+
+      font-size: 0.8em;
+      font-style: italic;
+    }
+
+    &__homepage{
+      font-style: italic;
+      color: var(--hover-color);
+
+      transition: color 0.5s ease;
+
+      &:hover{
+        color: var(--font-color);
+      }
+    }
+
+    &__genre {
+      width: 100%;
+
+      font-size: 0.9em;
+      text-align: right;
+    }
+
+    &__range{
+      --range-size: 70px;
+
+      position: absolute;
+      left: -45px;
+      top: -35px;
+      z-index: 1;
+      @media (max-width: 576px){
+        left: 0;
+      }
+    }
+  }
+}

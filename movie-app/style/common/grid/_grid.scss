@@ -1,0 +1,20 @@
+/* ============ grid  ================== */
+
+.grid{
+  display: grid;
+  grid-template-columns: minmax(320px, 1400px);
+  grid-template-rows: max-content auto max-content;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5px;
+
+  min-height: 100vh;
+
+  background: var(--secondary-color);
+
+  &__row{
+    padding: 0 var(--padding);
+
+    background: var(--bg-color);
+  }
+}

@@ -1,0 +1,27 @@
+/* ============ variables  ================== */
+
+:root{
+  --padding: 2vw;
+
+  --light-color: #fff;
+  --dark-color: #000;
+  --secondary-color: #141414;
+  --hover-color: #8b0000;
+
+  --bg-color: var(--dark-color);
+  --font-color: var(--light-color);
+
+  --font-size: 14px;
+  --font-weight: 400;
+  --font-family: 'Roboto', sans-serif;
+
+  --shadow: 0 0 3px var(--font-color), 0 0 2px var(--bg-color);
+  --shadow2: 0 0 1px var(--hover-color), 0 0 1px var(--bg-color),  0 0 1px var(--hover-color);
+  --shadow3: 0 0 1px var(--font-color), 0 0 10px var(--bg-color),  0 0 11px var(--font-color);
+}
+
+$small-screen: 414px;
+$medium-screen: 576px;
+$large-screen: 768px;
+$extra-screen: 992px;
+$full-screen: 1200px;

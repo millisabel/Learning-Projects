@@ -1,0 +1,48 @@
+.language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  list-style: none;
+
+  @media (max-width: 950px){
+    justify-self: flex-end;
+  }
+
+  &__item {
+    font-weight: bold;
+
+    transition: color 0.5s ease;
+
+    &:first-child {
+      order: -1;
+    }
+  }
+
+  & label {
+    display: block;
+    padding: 5px;
+
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  & input {
+    display: none;
+
+    &:checked + label {
+      color: var(--hover-color);
+      cursor: default;
+    }
+
+    &:not(:checked) + label:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &::before {
+    content: '/';
+    color: var(--hover-color);
+  }
+}

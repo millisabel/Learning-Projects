@@ -1,0 +1,28 @@
+.link {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(31deg) brightness(107%) contrast(101%);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: invert(10%) sepia(90%) saturate(3788%) hue-rotate(354deg) brightness(92%) contrast(115%);
+  }
+
+  &--github {
+    width: 40px;
+    height: 40px;
+
+    font-size: 0;
+
+    background-image: url("../assets/img/ico/github-alt-brands.svg");
+  }
+
+  &--school {
+    width: 80px;
+    height: 40px;
+
+    font-size: 0;
+
+    background-image: url("../assets/img/ico/rs_school_js.svg");
+  }
+}
