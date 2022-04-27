@@ -2,11 +2,11 @@
 
 #### My work
 ___________________________________________________________________________________________________________
-##### [Sapper](https://millisabel.github.io/saper/)
+##### [Sapper](https://millisabel.github.io/Portfolio/saper/)
 - Technologies: HTML | SCSS | JS
 - Duration: January, 2022
 ___________________________________________________________________________________________________________
-##### [Filmoscope](https://millisabel.github.io/movie-app/)
+##### [Filmoscope](https://millisabel.github.io/Portfolio/movie-app/)
 - Overview: Implementation of an application that displays information about movies upon user request.
 - I implemented: 
     - Work with the The Movie Database (TMDB)
