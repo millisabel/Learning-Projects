@@ -3,7 +3,7 @@
 #### My work
 ___________________________________________________________________________________________________________
 ##### [Shelter](https://rolling-scopes-school.github.io/millisabel-JSFE2023Q1/shelter/)
-- Overview: .
+- Overview: landing page.
 - I implemented:
     - adaptive layout
     - infinite carousel slider
