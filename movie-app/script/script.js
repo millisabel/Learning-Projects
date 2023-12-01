@@ -7,7 +7,7 @@ const logo = document.querySelector('.logo');
 const language = document.querySelector('.language');
 
 const API_URL = 'https://api.themoviedb.org/3';
-const API_KEY = '0177ac7fe6b20dc668bda83741a865fe';
+const API_KEY = '5879789d1031a66074d31459c260b98a';
 
 const cinema = {
     genres: {},
