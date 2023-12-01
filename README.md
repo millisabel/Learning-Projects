@@ -2,6 +2,37 @@
 
 #### My work
 ___________________________________________________________________________________________________________
+##### [Shelter](https://rolling-scopes-school.github.io/millisabel-JSFE2023Q1/shelter/)
+- Overview: .
+- I implemented:
+    - adaptive layout
+    - infinite carousel slider
+    - pagination, popup, burger menu
+- Technologies: HTML | SCSS | JS
+- Duration: April, 2023
+___________________________________________________________________________________________________________
+##### [CSS Bayan](https://millisabel.github.io/cssBayan/cssBayan/index.html)
+- Overview: landing page of the site, which offers its services in growing plants in the garden and care of them.
+- Technologies: HTML | SCSS
+- Duration: March, 2023
+___________________________________________________________________________________________________________
+##### [Momentum](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL2022Q4/momentum/)
+- Overview: The application has a clock, image slider, weather widgets, audio player, quote of the day block, settings. Local storage - local storage - is used to store user name and locality..
+- Technologies: HTML | SCSS | JS
+- I implemented: 
+    - working with date and time;
+    - Custom audio player;
+    - saving data to local storage;
+    - using recursive setTimeout;
+    - dividing js-code into modules;
+    - working with asynchronous requests.
+- Duration: February, 2023
+___________________________________________________________________________________________________________
+##### [Plants](https://rolling-scopes-school.github.io/millisabel-JSFEPRESCHOOL2022Q4/plants/)
+- Overview: landing page of the site, which offers its services in growing plants in the garden and care of them.
+- Technologies: HTML | SCSS | JS
+- Duration: February, 2023
+___________________________________________________________________________________________________________
 ##### [Sapper](https://millisabel.github.io/Portfolio/saper/)
 - Technologies: HTML | SCSS | JS
 - Duration: January, 2022
